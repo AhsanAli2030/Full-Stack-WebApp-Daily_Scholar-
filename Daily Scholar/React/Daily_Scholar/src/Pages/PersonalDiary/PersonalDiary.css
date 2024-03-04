@@ -1,0 +1,391 @@
+.wrap-it-all{
+    background-color: #1B1A1D;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    color: white;
+}
+#work-space{
+   
+    width: 100%;
+    height: 88.5%;
+    
+}
+#middleHeading{
+    width: 100%;
+    height: 17%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -5vw;
+    font-family: "Anta", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size:3vw;
+        text-shadow: 0.3vw 0.7vh 0.3vw black;
+}
+#wrap-the-diary-material{
+    display: flex;
+    width: 60%;
+    height: 70%;
+    
+    margin-left: 25vw;
+}
+#Diary-area{
+    width: 80%;
+    height: 100%;
+    border: 0.7vw solid #8B318E;
+    border-radius: 2vw;
+    
+    margin-left: -4vw;
+}
+
+.buttons img{ 
+    width: 4vw;
+   
+     cursor: pointer;
+     transition: all 0.3s ease;
+}
+.buttons img:hover
+{ 
+    width: 4.5vw;
+    
+}
+
+#last img{
+    width: 5vw;
+    margin-left: -0.7vw;
+}
+#last img:hover
+{
+    width: 5.5vw;
+    
+}
+#buttons-three{
+    display: flex;
+    flex-direction: column;
+
+    margin-right: -3vw;
+    width: 10vw;
+    height: 50vh;
+    align-items:first baseline;
+    justify-content: center;
+    z-index: 100;
+    margin-top: 5.2vh;
+}
+#middle img{
+   margin-left: 100%;
+}
+                            /* About Component */
+#wrap-about-component{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#heading-for-diary{
+    color: white;
+   
+    width: 80%;
+    height: 11%;
+
+   
+    font-family: "Anta", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size:2.1vw;
+    text-shadow: 0.3vw 0.7vh 0.3vw black;
+   
+   margin-top: 3%;
+   margin-left: 10%;
+}
+#heading-for-diary span{
+    color: #12b8d5;
+}
+
+#explanatoion-for-diary{
+    color:white;
+  width: 80%;
+  height: 50%;
+  
+    font-family: "Anta", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size:1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+}
+#buttons-information{
+    
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+   
+}
+
+.press-three-buttons{
+    width: 60%;
+    height: 30%;
+    display: flex;
+   background-color: #12b8d5;
+   justify-content: space-evenly;
+   font-family: "Anta", sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   font-size:1vw;
+   box-shadow: 0.3vw 0.7vh 0.3vw black;
+   border-radius: 1vw;
+}
+.press-three-buttons span{
+    display: flex;
+    align-items: center;
+}
+
+.fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .fade-exit {
+    opacity: 1;
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+  }
+
+  /* Directory List Components */
+  #wrap-directory-list{
+    width: 100%;
+    height: 100%;
+   
+  }
+  #top-heading{
+    width: 100%;
+    height: 18%;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   justify-content: space-evenly;
+   font-family: "Anta", sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   font-size:2vw;
+   text-shadow: 0.3vw 0.7vh 0.3vw black;
+   
+   color: #12b8d5;
+  }
+  .first-one{
+    color: white;
+  }
+  #below-line{
+    
+    border-bottom: 0.5vw solid #8B318E;
+    
+    border-radius: 1vw;
+    height: 55%;
+  }
+  #All-diary-Notes{
+    
+    height: 80%;
+    width: 100%;
+  }
+
+  #repeat-in-fractions{
+    display: grid;
+    max-height:100%;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+    grid-template-rows: repeat(4, 1fr); /* 4 rows with equal height */
+    gap: 1vw; /* Space between items */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  grid-row-gap: 7vh; 
+  }
+  .diary-note{
+  
+  width: 8vw;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ transition: all 0.3s ease-out;
+ cursor: pointer;
+  } 
+  .diary-note:hover{
+    width: 9vw;
+  height: 9vh;
+  } 
+   
+  .diary-notes-container::WebkitScrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+  .diary-note img{
+    width: 4.3vw;
+    height: auto;
+   
+  }
+
+  #wrap-diary-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    
+  }
+#title-for-this{
+  margin-bottom: -2vh;
+  max-width: 5vw; /* Set your desired width */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ 
+  margin-left: 1.5vw;
+  font-family: "Anta", sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   font-size:1vw;
+   text-shadow: 0.3vw 0.7vh 0.3vw black;
+}
+                                            /* Single Note CSS */
+ #wrap-single-note{
+
+  width: 100%;
+  height: 92%;
+  
+ }
+ #dates{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Anta", sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   font-size:1vw;
+   text-shadow: 0.3vw 0.7vh 0.3vw black;
+   border-bottom: 0.2vw solid #8B318E;
+  margin-top: 1vh;
+ }
+ .created{
+  text-align: center;
+  margin-left: 1.2vw;
+ }
+ .updated-last{
+  text-align: center;
+  margin-right: 1.2vw;
+ }
+ .same span:nth-child(3){
+  color: #12b8d5;
+ }
+ .same span:nth-child(6){
+  color: #12b8d5;
+ }
+ .same span:nth-child(1){
+  color: #12b8d5;
+ }
+ #title-update {
+width: 100%;
+height: 15%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #12b8d5;
+font-family: "Anta", sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   font-size:3vw;
+   text-shadow: 0.3vw 0.7vh 0.3vw black;
+   margin-top: 1vh;
+ }
+ #titl-and-body{
+  width: 100%;
+  height: 75%;
+  
+ }
+ #title-update textarea{
+  background-color: #1B1A1D;
+  text-decoration: none;
+  color: white;
+  border: 2px soli #12b8d5;
+  margin-left: 1vw;
+ }
+ #body-now{
+  width: 100%;
+  height: 80%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 2vh;
+ }
+ #button{
+ 
+  width: 18%;
+  height: 50%;
+  font-size: 2vw;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 1vw;
+border: 0.3vw solid #12b8d5;
+transition: 0.3s ease all;
+cursor: pointer;
+text-shadow: 0.3vw 0.7vh 0.3vw black;
+box-shadow: 0.3vw 0.7vh 0.3vw black;
+ }
+ .second-one{
+  border: 0.3vw solid #B8403C;
+  width: 18%;
+  height: 50%;
+  font-size: 2vw;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 1vw;
+
+transition: 0.3s ease all;
+cursor: pointer;
+text-shadow: 0.3vw 0.7vh 0.3vw black;
+box-shadow: 0.3vw 0.7vh 0.3vw black;
+ }
+ .second-one:hover
+ {
+  font-size: 2.3vw;
+  background-color: #B8403C;
+ 
+ }
+ #button:hover
+ {
+  font-size: 2.3vw;
+  background-color: #12b8d5;
+ 
+ }
+
+ /* Add Diary Note Component */
+ #buttons-add{
+  width: 100%;
+ 
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+  font-family: "Anta", sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   font-size:1vw;
+   text-shadow: 0.3vw 0.7vh 0.3vw black;
+   border-bottom: 0.2vw solid #8B318E;
+  margin-top: 1vh;
+ }
