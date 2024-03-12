@@ -2,13 +2,12 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
   const location = window.location.href;
-  
 
   useEffect(() => {
     // Check if the current URL matches the "/personal-diary" route
     if (location === "http://localhost:5173/personal-diary") {
       let PersonalDiary = document.getElementById("About");
-      
+
       PersonalDiary.style.width = "0vw";
       PersonalDiary.style.height = "0vh";
       PersonalDiary.style.border = "0";
@@ -42,9 +41,9 @@ const Header = () => {
             <Link to="/study-notes">Study Notes</Link>
           </div>
 
-          <div className="right-three Signup" id="tasks">
+          {/* <div className="right-three Signup" id="tasks">
             <Link to="/daily-tasks">Daily Tasks</Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -14,13 +14,12 @@ import { CSSTransition } from "react-transition-group";
 import StickyNote from "./3dModel/StickyNote";
 const PersonalDiary = () => {
   const [activeComponent, setActiveComponent] = useState("About");
-
+  const [boolianField, setBoolianField] = useState(false);
   const renderComponent = () => {
     switch (activeComponent) {
       case "About":
         return <About />;
       case "Add_diary":
-        console.log("ADD hua");
         return <Add_diary />;
       case "Directory_list":
         return <Directory_list />;
@@ -28,6 +27,12 @@ const PersonalDiary = () => {
         return null;
     }
   };
+
+  // useEffect(() => {
+  //   if (boolianField === true && activeComponent === "Directory_list") {
+  //     renderComponent();
+  //   }
+  // });
   return (
     <div className="wrap-it-all">
       <Header />

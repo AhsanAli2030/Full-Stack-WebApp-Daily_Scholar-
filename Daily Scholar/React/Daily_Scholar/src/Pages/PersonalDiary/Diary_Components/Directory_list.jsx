@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from "react";
 import stickyNotepic from "../Assets_Diary/stick.png";
-import { Link, useParams } from "react-router-dom";
+import { useLocation, Link, useParams } from "react-router-dom";
 import SingleNote from "./SingleNote";
 
 const Directory_list = () => {
-  const [activeComponent, setActiveComponent] = useState("listOfNotes");
-  let [diaryNotes, setDiaryNotes] = useState([]);
+  const [activeComponentDirectory, setActiveComponentDirectory] =
+    useState("listOfNotes");
+  const [diaryNotes, setDiaryNotes] = useState([]);
 
   const { id } = useParams();
+  const location = useLocation();
+  const currentUrl = location.pathname;
+  useEffect(() => {
+    if (currentUrl === "/personal-diary/directory-list") {
+      setActiveComponentDirectory("listOfNotes");
+    } else if (currentUrl === "/personal-diary/:id") {
+      setStudyNotesComponets("singleObject");
+    }
+  }, [currentUrl]);
+
   const renderComponent = () => {
-    switch (activeComponent) {
+    switch (activeComponentDirectory) {
       case "listOfNotes":
         return (
           <>
@@ -26,7 +37,9 @@ const Directory_list = () => {
                     <div
                       className="diary-note"
                       key={note.id}
-                      onClick={() => setActiveComponent("singleObject")}
+                      onClick={() =>
+                        setActiveComponentDirectory("singleObject")
+                      }
                     >
                       <div id="wrap-diary-note">
                         <img src={stickyNotepic} alt="" />
@@ -43,7 +56,6 @@ const Directory_list = () => {
         return <SingleNote id={id} />;
 
       default:
-        console.log("lo");
         return null;
     }
   };
@@ -52,13 +64,16 @@ const Directory_list = () => {
     getAllDirayNotes();
   }, []);
 
-  let getAllDirayNotes = async () => {
-    let responseFromAllDiaryNotes = await fetch(
-      "http://127.0.0.1:8000/personal-diary/all-diary-notes"
-    );
-    let dataFromAllDiaryNotes = await responseFromAllDiaryNotes.json();
-
-    setDiaryNotes(dataFromAllDiaryNotes);
+  const getAllDirayNotes = async () => {
+    try {
+      const responseFromAllDiaryNotes = await fetch(
+        "http://127.0.0.1:8000/personal-diary/all-diary-notes"
+      );
+      const dataFromAllDiaryNotes = await responseFromAllDiaryNotes.json();
+      setDiaryNotes(dataFromAllDiaryNotes);
+    } catch (error) {
+      console.error("Error fetching all diary notes:", error);
+    }
   };
 
   return (

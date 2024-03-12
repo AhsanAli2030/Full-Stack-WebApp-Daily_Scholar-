@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Personal_Diary.apps.PersonalDiaryConfig',
+    'StudyNotes.apps.StudynotesConfig',
     'rest_framework',
     'corsheaders',
 ]

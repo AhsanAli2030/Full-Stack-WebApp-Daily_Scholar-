@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Directory_list from "./Directory_list";
 import About from "./About";
 
@@ -9,7 +9,16 @@ const Add_diary = () => {
     title: "Un-Titled",
     body: "Please Write Something 😊",
   });
+  const location = useLocation();
+  const currentUrl = location.pathname;
 
+  useEffect(() => {
+    if (currentUrl === "/personal-diary/create-diary-note") {
+      setActiveComponent("add_component");
+    } else if (currentUrl === "/personal-diary/directory-list") {
+      setActiveComponent("Directory_list");
+    }
+  }, [currentUrl]);
   const handleSubmitSave = () => {
     createDiaryNote();
   };
@@ -24,7 +33,6 @@ const Add_diary = () => {
           body: JSON.stringify(singleNote),
         }
       );
-      console.log(singleNote);
     } catch (error) {
       console.error("Error creating diary note:", error);
       // Handle error (e.g., display an error message to the user)
@@ -71,6 +79,7 @@ const Add_diary = () => {
                     defaultValue={singleNote.title}
                     style={{
                       width: "60%",
+                      resize: "none",
                       height: "80%",
                       padding: "0",
                       border: "0.2vw solid #12b8d5",
@@ -96,6 +105,7 @@ const Add_diary = () => {
                     style={{
                       width: "95%",
                       height: "100%",
+                      resize: "none",
                       border: "0vw solid #1B1A1D",
                       borderRadius: "0vw",
                       backgroundColor: "#1B1A1D",
